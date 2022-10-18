@@ -6,13 +6,15 @@ services:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: root
   backend:
-    build: backend/.
+    image: gerrome/java-angular-stack_backend:1
+    #build: backend/.
     ports: 
       - "8080:8080"
     depends_on:
       - db
   frontend:
-    build: frontend/.
+    image: gerrome/java-angular-stack_frontend:1
+    #build: frontend/.
     ports: 
       - "80:80"
     depends_on: 
