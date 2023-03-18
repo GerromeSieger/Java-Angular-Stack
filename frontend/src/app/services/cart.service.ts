@@ -17,7 +17,7 @@ import {ProductInOrder} from '../models/ProductInOrder';
 export class CartService {
 
 
-    private cartUrl = `http://victor.20.84.39.184.nip.io/api/cart`;
+    private cartUrl = `http://app.ifahsvictor.com/api/cart`;
 
     localMap = {};
 

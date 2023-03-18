@@ -10,7 +10,7 @@ import {apiUrl} from "../../environments/environment";
 })
 export class OrderService {
 
-    private orderUrl = `http://victor.20.84.39.184.nip.io/api/order`;
+    private orderUrl = `http://app.ifahsvictor.com/api/order`;
 
     constructor(private http: HttpClient) {
     }

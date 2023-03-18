@@ -30,7 +30,7 @@ export class UserService {
 
 
     login(loginForm): Observable<JwtResponse> {
-        const url = `http://victor.20.84.39.184.nip.io/api/login`;
+        const url = `http://app.ifahsvictor.com/api/login`;
         return this.http.post<JwtResponse>(url, loginForm).pipe(
             tap(user => {
                 if (user && user.token) {
@@ -55,16 +55,16 @@ export class UserService {
     }
 
     signUp(user: User): Observable<User> {
-        const url = `http://victor.20.84.39.184.nip.io/api/register`;
+        const url = `http://app.ifahsvictor.com/api/register`;
         return this.http.post<User>(url, user);
     }
 
     update(user: User): Observable<User> {
-        const url = `http://victor.20.84.39.184.nip.io/api/profile`;
+        const url = `http://app.ifahsvictor.com/api/profile`;
         return this.http.put<User>(url, user);    }
 
     get(email: string): Observable<User> {
-        const url = `http://victor.20.84.39.184.nip.io/api/profile/${email}`;
+        const url = `http://app.ifahsvictor.com/api/profile/${email}`;
         return this.http.get<User>(url);
     }
 

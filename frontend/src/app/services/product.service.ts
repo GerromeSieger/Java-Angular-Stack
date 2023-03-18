@@ -10,8 +10,8 @@ import {apiUrl} from '../../environments/environment';
 })
 export class ProductService {
 
-    private productUrl = `http://victor.20.84.39.184.nip.io/api/product`;
-    private categoryUrl = `http://victor.20.84.39.184.nip.io/api/category`;
+    private productUrl = `http://app.ifahsvictor.com/api/product`;
+    private categoryUrl = `http://app.ifahsvictor.com/api/category`;
 
     constructor(private http: HttpClient) {
     }
@@ -42,18 +42,18 @@ export class ProductService {
     }
 
     update(productInfo: ProductInfo): Observable<ProductInfo> {
-        const url = `http://victor.20.84.39.184.nip.io/api/seller/product/${productInfo.productId}/edit`;
+        const url = `http://app.ifahsvictor.com/api/seller/product/${productInfo.productId}/edit`;
         return this.http.put<ProductInfo>(url, productInfo);
     }
 
     create(productInfo: ProductInfo): Observable<ProductInfo> {
-        const url = `http://victor.20.84.39.184.nip.io/api/seller/product/new`;
+        const url = `http://app.ifahsvictor.com/api/seller/product/new`;
         return this.http.post<ProductInfo>(url, productInfo);
     }
 
 
     delelte(productInfo: ProductInfo): Observable<any> {
-        const url = `http://victor.20.84.39.184.nip.io/api/seller/product/${productInfo.productId}/delete`;
+        const url = `http://app.ifahsvictor.com/api/seller/product/${productInfo.productId}/delete`;
         return this.http.delete(url);
     }
 
